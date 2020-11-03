@@ -1,8 +1,24 @@
 <html>
     <head>
     <title> project </title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/style.css')}}">
     </head>
     <body>
-    {% block content %} {% endblock %}
+
+    <nav class = "nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="{{url_for('index')}}" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+                <a href="{{url_for('video1')}}" class="nav__link">Video</a>
+            </li>
+            
+        </ul>
+        
+    </nav>
+    {% block content %} 
+    
+    {% endblock %}
     </body>
 </html>
