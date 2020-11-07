@@ -10,6 +10,11 @@ class effects_lib (object):
     def __del__(self):
         self.video.release()
    
+    def get_frame(self):
+        frame_status , frame = self.video.read()
+        ret , jpeg = cv2.imencode(".jpg", frame)
+        return jpeg.tobytes() 
+
     def oil_painting(self):
         frame_status, frame = self.video.read()
         #modify frame here
