@@ -1,8 +1,16 @@
 <html>
     <head>
-    <title> project </title>
+    <title>Project</title>
     </head>
     <body>
-    {% block content %} {% endblock %}
+        <navbar>
+            <a href="{{url_for('index')}}">Home</a>
+            <a href="#">Techstack</a>
+            <a href="#">Workflow</a>
+            <a href="#">References</a>
+            <a href="{{ url_for('video1') }}">Stream Video</a>
+        </navbar>
+        <br>
+        {% block content %} {% endblock %}
     </body>
-</html>
+    </html>

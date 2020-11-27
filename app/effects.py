@@ -10,6 +10,7 @@ class effects_lib (object):
     def __del__(self):
         self.video.release()
 
+
     def oil_painting(self):
         frame_status, frame = self.video.read()
         #modify frame here
