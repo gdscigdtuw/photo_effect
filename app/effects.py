@@ -3,13 +3,13 @@ import cv2
 class effects_lib (object):
 
     ds_factor = 0.8
-    
+
     def __init__(self):
         self.video = cv2.VideoCapture(0)
 
     def __del__(self):
         self.video.release()
-   
+
     def oil_painting(self):
         frame_status, frame = self.video.read()
         #modify frame here
@@ -18,7 +18,7 @@ class effects_lib (object):
         frame = cv2.resize(frame,None, fx = self.ds_factor, fy = self.ds_factor, interpolation = cv2.INTER_AREA)
         ret, jpeg = cv2.imencode(".jpg", frame)
         return jpeg.tobytes()
-    
+
     def watercolor(self):
         frame_status, frame = self.video.read()
         #modify frame here
@@ -77,6 +77,8 @@ class effects_lib (object):
         frame_status, frame = self.video.read()
         #modify frame here
 
+        frame = cv2.imread('img.jpg')
+        dst_gray, dst_color = cv2.pencilSketch(img, sigma_s=60, sigma_r=0.07, shade_factor=0.05)
 
         frame = cv2.resize(frame,None, fx = self.ds_factor, fy = self.ds_factor, interpolation = cv2.INTER_AREA)
         ret, jpeg = cv2.imencode(".jpg", frame)
