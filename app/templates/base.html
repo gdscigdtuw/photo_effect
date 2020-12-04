@@ -3,6 +3,14 @@
     <title> project </title>
     </head>
     <body>
+        <navbar>
+            <a href="{{url_for('index')}}">Home</a>
+            <a href="#">Techstack</a>
+            <a href="#">Workflow</a>
+            <a href="#">References</a>
+            <a href="{{ url_for('video1') }}">Stream Video</a>
+            <a href="{{ url_for('cartoon') }}">Cartoonize Video</a>
+        </navbar>
     {% block content %} {% endblock %}
     </body>
 </html>
