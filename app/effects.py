@@ -1,3 +1,4 @@
+
 import cv2
 num_down = 2       # number of downsampling steps
 num_bilateral = 7  # number of bilateral filtering steps

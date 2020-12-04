@@ -26,3 +26,4 @@ def video1():
 @app.route('/cartoonize')
 def cartoon():
     return render_template('cartoon.html')
+
