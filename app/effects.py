@@ -18,6 +18,7 @@ class effects_lib (object):
     def oil_painting(self):
         frame_status, frame = self.video.read()
         #modify frame here
+        frame = cv2.xphoto.oilPainting(frame, 7, 1)
 
 
         frame = cv2.resize(frame,None, fx = self.ds_factor, fy = self.ds_factor, interpolation = cv2.INTER_AREA)
