@@ -114,3 +114,4 @@ class effects_lib (object):
         frame = cv2.resize(frame,None, fx = self.ds_factor, fy = self.ds_factor, interpolation = cv2.INTER_AREA)
         ret, jpeg = cv2.imencode(".jpg", frame)
         return jpeg.tobytes()
+
