@@ -66,7 +66,7 @@ class effects_lib (object):
     def cartoonize(self):
         frame_status, frame = self.video.read()
         #modify frame here
-        img_color = frame_status, frame
+        img_color =  frame
         # downsample image using Gaussian pyramid
         for _ in range(num_down):
             img_color = cv2.pyrDown(img_color)
@@ -79,7 +79,7 @@ class effects_lib (object):
             img_color = cv2.pyrUp(img_color)
 
         # convert to grayscale and apply median blur
-        img_gray = cv2.cvtColor(frame_status, frame, cv2.COLOR_RGB2GRAY)
+        img_gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
         img_blur = cv2.medianBlur(img_gray, 7)
 
         # detect and enhance edges
