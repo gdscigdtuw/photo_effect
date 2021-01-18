@@ -1,3 +1,4 @@
+
 from app import app
 from flask import render_template , Response
 from app.effects import effects_lib
@@ -21,4 +22,8 @@ def video_feed() :
 @app.route('/video1')
 def video1():
     return render_template('effects.html')
+
+@app.route('/cartoonize')
+def cartoon():
+    return render_template('cartoon.html')
 
