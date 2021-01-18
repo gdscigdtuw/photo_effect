@@ -1,4 +1,3 @@
-
 import cv2
 num_down = 2       # number of downsampling steps
 num_bilateral = 7  # number of bilateral filtering steps
@@ -91,7 +90,6 @@ class effects_lib (object):
         # convert back to color, bit-AND with color image
         img_edge = cv2.cvtColor(img_edge, cv2.COLOR_GRAY2RGB)
         frame = cv2.bitwise_and(img_color, img_edge)
-
         frame = cv2.resize(frame,None, fx = self.ds_factor, fy = self.ds_factor, interpolation = cv2.INTER_AREA)
         ret, jpeg = cv2.imencode(".jpg", frame)
         return jpeg.tobytes()
@@ -108,7 +106,8 @@ class effects_lib (object):
     def black_and_white_sketch(self):
         frame_status, frame = self.video.read()
         #modify frame here
-
+        
+        frame, color_sketch = cv2.pencilSketch(frame, sigma_s=60, sigma_r=0.07, shade_factor=0.05)
 
         frame = cv2.resize(frame,None, fx = self.ds_factor, fy = self.ds_factor, interpolation = cv2.INTER_AREA)
         ret, jpeg = cv2.imencode(".jpg", frame)
