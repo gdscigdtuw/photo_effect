@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="contContent">
+        <img src="{{ url_for('black_and_white_sketch') }}" alt="">
+        <img src="{{ url_for('oil_painting') }}" alt="" >
+        <img src="{{ url_for('cartoon') }}" alt="" >
+        <!-- <img src="{{ url_for('video_feed') }}" alt=""> -->
+    </div>
+</div>
+{% endblock %}
