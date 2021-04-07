@@ -62,3 +62,8 @@ NOTE: It is vital that you install Python before moving on to subsequent steps.
 ## References:
 1. Flask documentation https://flask.palletsprojects.com/en/1.1.x/
 2. OpenCV documentation https://opencv.org/
+3. Flask & OpenCV session recordings:
+    * Intro to Flask: https://drive.google.com/file/d/1o0Ju5zeuhFY9unZup6v1eb7aUZy3Y3Mb/view?usp=sharing
+    * Intro to OpenCV: https://drive.google.com/file/d/1U8zHgcfnfL1CxMD74sjrM2ZUYU16g6D7/view?usp=sharing
+    * Video streaming with Flask: https://drive.google.com/file/d/1cuglmCKhbQg97rGnyHpA1q7kNF2HJ_5t/view?usp=sharing
+    * For session codes check out https://github.com/dscigdtuw/WebD/tree/master/Flask
