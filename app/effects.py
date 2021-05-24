@@ -54,9 +54,12 @@ class effects_lib (object):
 
     def edge_detection(self):
         frame_status, frame = self.video.read()
-        #modify frame here
+        blur=cv2.gaussianBlur(frame,(5,5),0)
+        edges=cv2.Canny(blur,100,200)
+        cv2.imshow("canny detection",edges)
 
-
+            
+ 
         frame = cv2.resize(frame,None, fx = self.ds_factor, fy = self.ds_factor, interpolation = cv2.INTER_AREA)
         ret, jpeg = cv2.imencode(".jpg", frame)
         return jpeg.tobytes()
@@ -112,4 +115,4 @@ class effects_lib (object):
         frame = cv2.resize(frame,None, fx = self.ds_factor, fy = self.ds_factor, interpolation = cv2.INTER_AREA)
         ret, jpeg = cv2.imencode(".jpg", frame)
         return jpeg.tobytes()
-
+    
