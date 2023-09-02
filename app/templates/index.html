@@ -1,15 +1,87 @@
-{%extends 'base.html' %}
+{% extends 'base.html' %}
 {% block content %}
-<h1>Photo Effect!</h1>
-<p>Photo effect is a good and fast way to make your ordinary image beautiful
-</br>It is a web application that renders an effect on an image uploaded by user using python image processing libraries.
+<style>
+    h1 {
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+       
+    }
 
+    p {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    h2 {
+        color: #333;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        
+    }
+
+    ul {
+        color: #666;
+        font-size: 16px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .container {
+        margin-top: 20px;
+        
+    }
+
+    .Items {
+        display: flex;
+        
+    }
+
+    .ItemList {
+        color: #fff;
+        background-color: #333;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+</style>
+
+<h1>Photo Effect!</h1>
+<p>
+    Welcome to Photo Effect! Our web application utilizes the power of Python,
+    <br> Flask, and OpenCV to transform your ordinary images into stunning masterpieces.
+    <br> With just a few clicks,
+    you can enhance the beauty of your photos in a quick and efficient manner.
+</p>
+
+<h2>Here's how it works:</h2>
+<ul>
+    <li>Start by uploading your desired image through our intuitive user interface.</li>
+    <li>Once the image is uploaded, our application springs into action. 
+        <br>We employ Python's image processing libraries, including the popular OpenCV,
+        <br> to apply a range of captivating effects to your photo.</li>
+    <li>The image is transformed using advanced algorithms and techniques,
+        <br> enhancing its visual appeal and turning it into a stunning masterpiece.</li>
+    <li>Finally, with just a simple click, you can download the processed image, 
+        <br>ready to be shared, printed, or cherished.</li>
+</ul>
+
+<p>Whether you're looking to spice up your social media feed,
+    <br>add artistic flair to your website, or simply create eye-catching visuals, 
+    <br>Photo Effect is here to make your ordinary images extraordinary.
+    <br>Experience the power of Python, Flask, and OpenCV in action and unlock 
+    <br>a world of endless creative possibilities. Try Photo Effect today and 
+    <br>see your images come to life!</p>
 
 <div class="container">
     <div class="Items">
-        <a href=" {{url_for }}" class="ItemList"></a>
+        <a href="{{ url_for }}" class="ItemList">Click here</a>
     </div>
 </div>
 
-</p>
 {% endblock %}
